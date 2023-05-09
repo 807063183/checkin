@@ -3,7 +3,7 @@ name: GLADOS-CheckIn
 on:
   push:
   schedule:
-    - cron: 30 16 * * * 
+    - cron: 0 17 * * * 
 
 jobs:
   run:
@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm run main
+      - run: node main.js
         env:
           GLADOS: ${{ secrets.GLADOS }}
           NOTIFY: ${{ secrets.NOTIFY }}
