@@ -1,10 +1,11 @@
 name: GLADOS-CheckIn
 
 on:
+  workflow_dispatch:
   push:
       branches: [ main ]
   schedule:
-    - cron: 10 17 * * * 
+    - cron: 15 17 * * * 
 
 jobs:
   run:
