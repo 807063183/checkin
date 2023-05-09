@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: node main.js
+      - run: npm run main
         env:
           GLADOS: ${{ secrets.GLADOS }}
           NOTIFY: ${{ secrets.NOTIFY }}
