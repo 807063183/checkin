@@ -5,7 +5,7 @@ on:
   push:
       branches: [ main ]
   schedule:
-    - cron: 15 17 * * * 
+    - cron: 30 08 * * * 
 
 jobs:
   run:
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm run main
+      - run: npm GLADOS-CheckIn main
         env:
           GLADOS: ${{ secrets.GLADOS }}
           NOTIFY: ${{ secrets.NOTIFY }}
